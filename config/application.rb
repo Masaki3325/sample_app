@@ -23,7 +23,7 @@ module SampleApp
     # 認証トークンをremoteフォームに埋め込む
     config.action_view.embed_authenticity_token_in_remote_forms = true
     # デプロイするサービスのホストを追加する
-    config.hosts << 'https://rails-tutorial-2iyj.onrender.com'
+    config.hosts << 'rails-tutorial-2iyj.onrender.com'
 
   end
 end
