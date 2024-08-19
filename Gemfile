@@ -22,6 +22,12 @@ gem 'bcrypt',         '3.1.11'
 gem 'faker', '~> 2.20'
 gem 'will_paginate', '~> 3.3.1'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'carrierwave', '~> 2.0'    # 最新の安定バージョンに更新
+gem 'mini_magick', '~> 4.11'   # 最新の安定バージョンに更新
+# gem 'fog', '~> 2.0'            # Ruby 3.2.2と互換性のあるバージョンに更新
+# fog全体をインストールする代わりに、特定のプロバイダのみをインストール
+gem 'fog-aws', '~> 3.6'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

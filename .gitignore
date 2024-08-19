@@ -65,3 +65,5 @@ yarn-debug.log*
 
 # Ignore Spring files.
 /spring/*.pid
+
+/public/uploads
