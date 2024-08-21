@@ -1,7 +1,11 @@
 {
   "name": "sample-app",
   "private": true,
+  "engines": {
+    "node": "^16.17"
+  },
   "dependencies": {
+
     "@babel/plugin-transform-private-methods": "^7.24.0",
     "@popperjs/core": "^2.11.8",
     "@rails/actioncable": "^6.0.0",
@@ -37,5 +41,6 @@
     "chokidar": "^3.5.3",
     "rimraf": "^4.0.0",
     "memfs": "^3.6.0"
-  }
+  },
+  "packageManager": "yarn@1.22.21"
 }
