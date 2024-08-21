@@ -7,7 +7,7 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.4.4",
+    "@rails/webpacker": "^6.0.0",
     "bootstrap": "^5.3.1",
     "jquery": "^3.7.1",
     "turbolinks": "^5.2.0",
@@ -26,6 +26,15 @@
     "@babel/preset-env": "^7.25.3",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-macros": "^3.1.0",
-    "webpack-dev-server": "^4.15.0"
+    "webpack-dev-server": "^4.15.0",
+    "chokidar": "^3.5.3",
+    "rimraf": "^4.0.0",
+    "css-minimizer-webpack-plugin": "^4.0.0"
+  },
+  "resolutions": {
+    "glob": "^9.0.0",
+    "chokidar": "^3.5.3",
+    "rimraf": "^4.0.0",
+    "memfs": "^3.6.0"
   }
 }
