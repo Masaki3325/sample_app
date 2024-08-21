@@ -8,19 +8,27 @@ environment.plugins.append('Provide', new webpack.ProvidePlugin({
   Popper: ['popper.js', 'default']
 }))
 
-// nodeオプションの設定を追加
-environment.config.merge({
-  node: {
-    __dirname: false,    // 必要に応じて設定
-    __filename: false,   // 必要に応じて設定
-    global: true,        // 必要に応じて設定
-    // 以下のプロパティはWebpack 5ではサポートされていないため削除または無効化
-    // fs: 'empty',        // 削除または無効化
-    // net: 'empty',       // 削除または無効化
-    // tls: 'empty',       // 削除または無効化
-    // dgram: 'empty',     // 削除または無効化
-    // child_process: 'empty' // 削除または無効化
+// nodeオプションの設定
+
+const customConfig = {
+  resolve: {
+    fallback: {
+      dgram: false,
+      fs: false,
+      net: false,
+      tls: false,
+      child_process: false
+    }
   }
-});
+};
+
+environment.config.delete('node.dgram')
+environment.config.delete('node.fs')
+environment.config.delete('node.net')
+environment.config.delete('node.tls')
+environment.config.delete('node.child_process')
+
+environment.config.merge(customConfig);
+
 
 module.exports = environment;
