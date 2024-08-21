@@ -37,30 +37,30 @@ module.exports = function(api) {
       ]
     ].filter(Boolean),
     plugins: [
-      'macros',
+      'babel-plugin-macros', // ここを明確化
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',
       [
-        '@babel/plugin-transform-class-properties',  // ここで置き換え
+        '@babel/plugin-transform-class-properties',
         {
           loose: true
         }
       ],
       [
-        '@babel/plugin-transform-object-rest-spread',  // ここで置き換え
+        '@babel/plugin-transform-object-rest-spread',
         {
           useBuiltIns: true
         }
       ],
       [
-        '@babel/plugin-transform-private-methods',  // ここで置き換え
+        '@babel/plugin-transform-private-methods',
         {
           loose: true
         }
       ],
       [
-        '@babel/plugin-transform-private-property-in-object',  // ここで置き換え
+        '@babel/plugin-transform-private-property-in-object',
         {
           loose: true
         }
