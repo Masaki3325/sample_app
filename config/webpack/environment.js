@@ -1,15 +1,14 @@
-const { environment } = require('@rails/webpacker')
-const webpack = require('webpack')
+const { environment } = require('@rails/webpacker');
+const webpack = require('webpack');
 
 // ProvidePluginの設定
 environment.plugins.append('Provide', new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery',
   Popper: ['popper.js', 'default']
-}))
+}));
 
-// nodeオプションの設定
-
+// resolve.fallbackの設定
 const customConfig = {
   resolve: {
     fallback: {
@@ -22,13 +21,10 @@ const customConfig = {
   }
 };
 
-environment.config.delete('node.dgram')
-environment.config.delete('node.fs')
-environment.config.delete('node.net')
-environment.config.delete('node.tls')
-environment.config.delete('node.child_process')
+// nodeオプションを削除
+environment.config.delete('node');
 
+// customConfigをマージ
 environment.config.merge(customConfig);
-
 
 module.exports = environment;
