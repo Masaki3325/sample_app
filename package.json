@@ -1,6 +1,9 @@
 {
   "name": "sample-app",
   "private": true,
+  "engines": {
+    "node": "^16.17"
+  },
   "dependencies": {
     "@babel/plugin-transform-private-methods": "^7.25.4",
     "@popperjs/core": "^2.11.8",
